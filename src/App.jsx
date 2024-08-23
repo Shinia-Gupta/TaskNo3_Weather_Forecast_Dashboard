@@ -1,12 +1,10 @@
-import { useState } from 'react'
 import './App.css'
-import search from './assets/icons/search.svg'
 import { useStateContext } from './Context'
-import { AppBackground, WeatherCard, ForecastCard,WeekCardList,WeatherHighlights } from './Components'
+import { AppBackground, WeatherCard, WeekCardList,WeatherHighlights } from './Components'
 
 function App() {
 
-  const { weather, thisLocation, values, setCity } = useStateContext()
+  const { weather, thisLocation, setCity } = useStateContext()
   // console.log(weather)
 
   const submitCity = (input) => {
