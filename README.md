@@ -24,11 +24,6 @@ Check out the live version of the app [here](https://task-no3-weather-forecast-d
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-
 ### Installation
 
 1. **Clone the repository:**
