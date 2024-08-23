@@ -123,7 +123,7 @@ const WeatherCard = ({
       {/* Heat Index  */}
       <div className="mt-4 text-center ">
         <p className="text-xl ">Heat Index</p>
-        <p className="text-lg mt-2 text-gray-500"> {heatIndex?heatIndex:'N/A'}</p>
+        <p className="text-lg mt-2 text-gray-500"> {heatIndex!==null?heatIndex:"No Data Available"}</p>
       </div>
     </div>
   );
