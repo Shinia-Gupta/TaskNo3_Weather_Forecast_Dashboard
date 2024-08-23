@@ -4,7 +4,7 @@ A simple weather app built with Vite, React, HTML, Tailwind CSS, and JavaScript.
 
 ## Live Demo
 
-Check out the live version of the app [here](#).
+Check out the live version of the app [here](https://task-no3-weather-forecast-dashboard-9lcu32hve.vercel.app/).
 
 ## Features
 
