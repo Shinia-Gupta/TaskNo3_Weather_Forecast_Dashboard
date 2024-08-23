@@ -30,7 +30,7 @@ const [unit,setUnit]=useState('C');
 
         try {
             const response = await axios.request(options);
-            console.log(response.data)
+            // console.log(response.data)
             const data = Object.values(response.data.locations)[0]
             
             
