@@ -39,7 +39,7 @@ const [unit,setUnit]=useState('C');
             setWeather(data.values[0])
         } catch (e) {
             console.error(e);
-            alert('This city does not exist')
+            alert('This location does not exist')
         }
     }
 
@@ -51,9 +51,9 @@ const [unit,setUnit]=useState('C');
         fetchWeather()
     }, [city])
 
-    useEffect(() => {
-        console.log(values)
-    }, [values])
+    // useEffect(() => {
+    //     console.log(values)
+    // }, [values])
     
     const convertCelsiusToFahrenheit=(celsius)=> {
         return (celsius * 9/5) + 32;
