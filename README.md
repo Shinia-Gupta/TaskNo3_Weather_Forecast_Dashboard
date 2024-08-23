@@ -19,6 +19,7 @@ Check out the live version of the app [here](https://task-no3-weather-forecast-d
 - **HTML:** Markup language for structuring the app.
 - **Tailwind CSS:** Utility-first CSS framework for styling.
 - **JavaScript:** Core programming language for the app's functionality.
+- **Visual Crossing Weather API:** Used for fetching real-time weather data.
 
 ## Getting Started
 
@@ -56,6 +57,10 @@ npm run build
 ```
 
 This will generate a `dist` folder with the optimized build of the app.
+
+## API Integration
+
+The weather data for this app is fetched from the [Visual Crossing Weather API](https://www.visualcrossing.com/weather-api), which provides detailed weather information for locations around the world.
 
 ## Contributing
 
