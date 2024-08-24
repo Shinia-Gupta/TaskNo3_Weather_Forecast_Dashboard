@@ -25,7 +25,7 @@ function App() {
       <AppBackground />
 
       {/* Main content area with a responsive layout using flexbox */}
-      <main className='w-full md:glassCard flex flex-col lg:flex-row py-4 px-[2%] gap-2'>
+      <main className='w-full flex flex-col lg:flex-row py-4 px-[2%] gap-2'>
         <div>
           {/* WeatherCard component displaying weather information */}
           <WeatherCard
@@ -41,7 +41,7 @@ function App() {
             rainPercentage={weather.pop}    
           />
         </div>
-        <div className='flex flex-col'>
+        <div className='flex flex-col glassCard p-4'>
           {/* WeekCardList component displaying a 7-day forecast */}
           <WeekCardList />
 
