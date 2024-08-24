@@ -29,16 +29,16 @@ function App() {
         <div>
           {/* WeatherCard component displaying weather information */}
           <WeatherCard
-            city={thisLocation}            // Location name
-            windspeed={weather.wspd}        // Wind speed
-            humidity={weather.humidity}     // Humidity level
-            temperature={weather.temp}      // Current temperature
-            heatIndex={weather.heatindex}   // Heat index
-            iconString={weather.conditions} // Weather icon based on conditions
-            conditions={weather.conditions} // Weather conditions description
-            submitCity={submitCity}         // Function to handle city submission
-            setCity={setCity}               // Function to update the city
-            rainPercentage={weather.pop}    // Chance of rain
+            city={thisLocation}            
+            windspeed={weather.wspd}        
+            humidity={weather.humidity}     
+            temperature={weather.temp}      
+            heatIndex={weather.heatindex}   
+            iconString={weather.conditions} 
+            conditions={weather.conditions} 
+            submitCity={submitCity}         
+            setCity={setCity}               
+            rainPercentage={weather.pop}    
           />
         </div>
         <div className='flex flex-col'>
