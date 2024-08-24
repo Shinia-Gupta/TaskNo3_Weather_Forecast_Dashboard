@@ -2,12 +2,16 @@ import React, { useEffect } from "react";
 import { useStateContext } from "../Context";
 
 function WeatherHighlights() {
+  // Destructuring weather data and utility functions from the context
   const { weather, unit, fetchWeather, displayTemperature } = useStateContext();
+
+  // Fetch weather data on component mount
   useEffect(() => {
     fetchWeather();
   }, []);
 
-  // Helper functions to determine text based on values
+  // Helper functions to determine status based on values
+
   const getHumidityStatus = (humidity) => {
     if (humidity < 30) return "Low 🟢";
     if (humidity < 60) return "Normal 👍";
@@ -35,17 +39,21 @@ function WeatherHighlights() {
     if (uvindex > 7 && uvindex <= 10) return "Very High 🕶️";
     if (uvindex > 10) return "Extreme 🚨";
   };
+
   return (
     <div className="p-4">
+      {/* Section title */}
       <h2 className="text-xl font-bold uppercase mb-6 text-gray-700">
         Today's Highlights
       </h2>
 
+      {/* Highlights Grid */}
       <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-gray-700 font-semibold">
+        
         {/* UV Index */}
-        <div className="glassCard p-6 rounded-lg shadow-lg flex flex-col ">
+        <div className="glassCard p-6 rounded-lg shadow-lg flex flex-col">
           <h3 className="text-sm mb-2">UV Index</h3>
-          <div className="w-20 h-20 flex ">
+          <div className="w-20 h-20 flex">
             <span className="absolute text-3xl font-semibold text-gray-800">
               {weather.uvindex}
             </span>
@@ -66,10 +74,11 @@ function WeatherHighlights() {
         </div>
 
         {/* Max & Min Temperature */}
-        <div className="glassCard p-6 rounded-lg shadow-md flex flex-col ">
+        <div className="glassCard p-6 rounded-lg shadow-md flex flex-col">
           <h3 className="text-sm">Max & Min Temperature</h3>
           <div className="flex flex-col justify-between mt-2">
             <div className="flex items-center">
+              {/* Max Temperature */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -82,7 +91,6 @@ function WeatherHighlights() {
                   clipRule="evenodd"
                 />
               </svg>
-
               <div>
                 <p className="text-3xl">
                   {displayTemperature(weather?.maxt)}&nbsp;
@@ -91,6 +99,7 @@ function WeatherHighlights() {
               </div>
             </div>
             <div className="flex items-center">
+              {/* Min Temperature */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

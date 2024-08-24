@@ -46,7 +46,7 @@ const WeatherCard = ({
 
   return (
     <div className=" w-full h-full lg:w-[25rem] glassSidebar text-gray-700 p-8 flex flex-col items-center font-bold">
-      {/* Search and Settings Icons */}
+      {/* Search Icon */}
       <div className="w-full flex justify-center items-center ">
         <div className="flex justify-center items-center text-gray-400 text-lg">
           <svg

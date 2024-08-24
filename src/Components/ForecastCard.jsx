@@ -9,9 +9,12 @@ import wind from "../assets/icons/windy.png";
 import { useStateContext } from "../Context";
 
 const ForecastCard = ({ time, temp, iconString }) => {
+  // State to manage the weather icon
   const [icon, setIcon] = useState();
   const { unit, displayTemperature } = useStateContext();
+
   useEffect(() => {
+    // Update the icon based on the iconString value
     if (iconString) {
       if (iconString.toLowerCase().includes("cloud")) {
         setIcon(cloud);
@@ -28,13 +31,15 @@ const ForecastCard = ({ time, temp, iconString }) => {
       } else if (iconString.toLowerCase().includes("wind")) {
         setIcon(wind);
       } else {
-        setIcon(wind);
+        setIcon(wind); // Default icon if no match found
       }
     }
   }, [iconString]);
+
   return (
-    <div className="glassCard xs:w-[10rem] lg:w-[8rem] h-[12rem] p-4 ">
+    <div className="glassCard xs:w-[10rem] lg:w-[8rem] h-[12rem] p-4">
       <p className="text-center">
+        {/* Display day of the week from the time prop */}
         {
           new Date(time)
             .toLocaleTimeString("en", { weekday: "long" })
@@ -43,6 +48,7 @@ const ForecastCard = ({ time, temp, iconString }) => {
       </p>
       <hr />
       <div className="w-full flex justify-center items-center flex-1">
+        {/* Display the weather icon */}
         <img
           src={icon}
           alt="forecast not available"
@@ -50,9 +56,11 @@ const ForecastCard = ({ time, temp, iconString }) => {
         />
       </div>
       <p className="text-center font-bold">
+        {/* Display the temperature with the appropriate unit */}
         {displayTemperature(temp)}&deg;{unit}
       </p>
       <div className="h-[1.5rem]">
+        {/* Display the icon description */}
         <p className="w-full text-sm text-center text-blue-800 font-semibold">
           {iconString}
         </p>
